@@ -9,9 +9,20 @@
 
     <TextView
         android:id="@+id/tvHello"
-        android:text="Hello world!!!"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello world!!!" />
+
+    <EditText
+        android:inputType="text"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/editTextHello"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number" />
 
 
 </LinearLayout>
