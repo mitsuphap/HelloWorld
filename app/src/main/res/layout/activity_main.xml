@@ -82,9 +82,9 @@
 
     <RadioGroup
         android:id="@+id/rgOperator"
-        android:checkedButton="@+id/rbPlus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:checkedButton="@+id/rbPlus"
         android:orientation="horizontal">
 
         <RadioButton
@@ -95,26 +95,37 @@
 
         <RadioButton
             android:id="@+id/rbMinus"
-            android:layout_marginLeft="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
             android:text="-" />
 
         <RadioButton
             android:id="@+id/rbMultiply"
-            android:layout_marginLeft="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
             android:text="*" />
 
         <RadioButton
             android:id="@+id/rbDevide"
-            android:layout_marginLeft="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
             android:text="/" />
 
     </RadioGroup>
 
+    <ProgressBar
+        style="@android:style/Widget.Holo.ProgressBar.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ProgressBar
+        style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:progress="33" />
 
 </LinearLayout>
