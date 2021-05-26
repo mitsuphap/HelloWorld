@@ -14,15 +14,21 @@
         android:text="Hello world!!!" />
 
     <EditText
-        android:inputType="text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/editTextHello"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnCopy"
+        android:text="Copy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 
 </LinearLayout>
