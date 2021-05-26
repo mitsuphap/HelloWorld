@@ -1,29 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#ffaaaa"
-        android:text="Hello World!" />
+    <View
+        android:id="@+id/viewRed"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="100dp"
+        android:background="#ff0000" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#aaffaa"
-        android:text="Hello World!" />
+    <View
+        android:id="@+id/viewYellow"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_toRightOf="@id/viewRed"
+        android:layout_alignTop="@id/viewRed"
+        android:background="#ffff00" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="#aaaaff"
-        android:text="Hello World!" />
+    <View
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/viewYellow"
+        android:layout_alignLeft="@id/viewYellow"
+        android:background="#0000ff" />
 
-</LinearLayout>
+</RelativeLayout>
