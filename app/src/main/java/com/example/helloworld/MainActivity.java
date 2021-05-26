@@ -10,12 +10,26 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TextView tvHello;
     EditText editTextHello;
     Button btnCopy;
+
+    ///////////////////////
+    //Start Calculator here
+    ///////////////////////
+    EditText editText1;
+    EditText editText2;
+    TextView tvResult;
+    Button btnCalculate;
+    RadioGroup rgOperator;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,12 +59,53 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnCopy = (Button) findViewById(R.id.btnCopy);
         btnCopy.setOnClickListener(this);
+
+        ///////////////////////
+        //Start Calculator Here
+        ///////////////////////
+
+        editText1 = findViewById(R.id.editText1);
+        editText2 = findViewById(R.id.editText2);
+        tvResult = findViewById(R.id.tvResult);
+
+        btnCalculate = findViewById(R.id.btnCalculate);
+        btnCalculate.setOnClickListener(this);
+
+        rgOperator = findViewById(R.id.rgOperator);
     }
 
     @Override
     public void onClick(View v) {
-        if(v == btnCopy) {
+        if (v == btnCopy) {
             tvHello.setText(editTextHello.getText());
+        }
+        if (v == btnCalculate) {
+            int val1 = 0;
+            int val2 = 0;
+            int result = 0;
+            try {
+                val1 = Integer.parseInt(editText1.getText().toString());
+            } catch (NumberFormatException e) {
+            }
+            try {
+                val2 = Integer.parseInt(editText2.getText().toString());
+            } catch (NumberFormatException e) {
+            }
+
+            switch (rgOperator.getCheckedRadioButtonId()) {
+                case R.id.rbPlus:
+                    result = val1 + val2;
+                case R.id.rbMinus:
+                    result = val1 - val2;
+                    break;
+                case R.id.rbMultiply:
+                    result = val1 * val2;
+                    break;
+                case R.id.rbDevide:
+                    result = val1 / val2;
+                    break;
+            }
+            tvResult.setText("= " + result);
         }
     }
 }
