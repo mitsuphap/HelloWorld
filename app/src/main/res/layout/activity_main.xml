@@ -133,18 +133,21 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
+        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
             android:src="@drawable/ic_launcher" />
 
-        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
+        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:scaleType="fitXY"
             android:src="@drawable/ic_launcher" />
     </LinearLayout>
 
