@@ -3,10 +3,12 @@ package com.example.helloworld;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Point;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
+import android.view.Display;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -35,12 +37,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnCalculate;
     RadioGroup rgOperator;
 
+    int width;
+    int height;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         initInstances();
+
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        width = size.x; // Screen Width
+        height = size.y; // Screen Height
+        Toast.makeText(MainActivity.this, "Width = " + width + ", Height = " + height, Toast.LENGTH_SHORT).show();
+
     }
 
     private void initInstances() {
