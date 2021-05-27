@@ -72,7 +72,7 @@
         android:id="@+id/btnCalculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CALCULATE" />
+        android:text="@string/calculate" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -97,21 +97,21 @@
             android:id="@+id/rbMinus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="@dimen/radio_button_margin_left"
             android:text="-" />
 
         <RadioButton
             android:id="@+id/rbMultiply"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="@dimen/radio_button_margin_left"
             android:text="*" />
 
         <RadioButton
             android:id="@+id/rbDevide"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="@dimen/radio_button_margin_left"
             android:text="/" />
 
     </RadioGroup>
@@ -127,5 +127,10 @@
         android:layout_height="wrap_content"
         android:indeterminate="true"
         android:progress="33" />
+
+    <ImageView
+        android:src="@drawable/ic_launcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
