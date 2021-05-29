@@ -140,6 +140,10 @@
                 android:indeterminate="true"
                 android:progress="33" />
 
+            <com.example.helloworld.CustomView
+                android:layout_width="match_parent"
+                android:layout_height="160dp" />
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
