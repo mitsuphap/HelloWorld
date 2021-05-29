@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HelloWorld</string>
+    <string name="app_name" translatable="false">HelloWorld</string>
     <string name="calculate">Calculate</string>
-    <string name="setting">Setting</string>
+    <string name="setting" translatable="false">Setting</string>
 </resources>
