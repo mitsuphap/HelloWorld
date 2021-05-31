@@ -141,14 +141,24 @@
                 android:indeterminate="true"
                 android:progress="33" />
 
+            <com.example.helloworld.CustomViewGroup
+                android:id="@+id/viewGroup1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></com.example.helloworld.CustomViewGroup>
+
+            <com.example.helloworld.CustomViewGroup
+                android:id="@+id/viewGroup2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></com.example.helloworld.CustomViewGroup>
+
             <mehdi.sakout.fancybuttons.FancyButton
                 android:id="@+id/btn_spotify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
                 android:paddingLeft="20dp"
-                android:paddingRight="20dp"
                 android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
                 fancy:fb_borderColor="#FFFFFF"
                 fancy:fb_borderWidth="1dp"
                 fancy:fb_defaultColor="#7ab800"
