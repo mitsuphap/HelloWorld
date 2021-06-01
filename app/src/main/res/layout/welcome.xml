@@ -63,29 +63,28 @@
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:background="@drawable/selector_btn_welcome"
-            android:text="Get Started">
-        </Button>
+            android:text="Get Started"></Button>
 
         <TextView
+            style="@style/TextViewStyle.Green"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="skip"
-            android:textColor="@color/white">
+            android:text="skip">
             android:layout_centerHorizontal="true"</TextView>
 
 
         <TextView
             android:id="@+id/policy"
+            style="@style/TextViewStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="4dp"
-            android:text="By continuing, you accept the Term of Use and Privacy Policy"
-            android:textColor="@color/white"></TextView>
+            android:text="By continuing, you accept the Term of Use and Privacy Policy"></TextView>
     </LinearLayout>
 
 </RelativeLayout>
