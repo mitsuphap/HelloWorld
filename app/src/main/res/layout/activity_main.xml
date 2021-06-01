@@ -141,6 +141,8 @@
                 android:indeterminate="true"
                 android:progress="33" />
 
+            <include layout="@layout/sample_bar" />
+
             <com.example.helloworld.CustomViewGroup
                 android:id="@+id/viewGroup1"
                 android:layout_width="match_parent"
