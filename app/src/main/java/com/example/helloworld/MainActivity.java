@@ -3,6 +3,7 @@ package com.example.helloworld;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.text.Html;
@@ -137,6 +138,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Log.d("Calculation", "Result = " + result);
 
             Toast.makeText(MainActivity.this, "Result = " + result, Toast.LENGTH_SHORT).show();
+
+            //send to next activity
+            Intent intent = new Intent(MainActivity.this,
+                    SecondActivity.class);
+            intent.putExtra("result",result);
+            startActivity(intent);
         }
     }
 
