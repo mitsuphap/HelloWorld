@@ -143,6 +143,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(MainActivity.this,
                     SecondActivity.class);
             intent.putExtra("result",result);
+
+            //Playground
+            Coordinate c1 = new Coordinate();
+            c1.x = 5;
+            c1.y = 10;
+            c1.z = 20;
+            Bundle bundle = new Bundle();
+            bundle.putInt("x", c1.x);
+            bundle.putInt("y", c1.y);
+            bundle.putInt("z", c1.z);
+            intent.putExtra("cBundle", bundle);
+
+            //Serializable Lab
+            CooridinateSerializable c2 = new CooridinateSerializable();
+            c2.x = 5;
+            c2.y = 10;
+            c2.z = 20;
+            intent.putExtra("cSerialazable", c2);
+
+            CooridinateParcelable c3 = new CooridinateParcelable();
+            c3.x = 5;
+            c3.y = 10;
+            c3.z = 20;
+            intent.putExtra("cParcelable", c3);
+
             startActivity(intent);
         }
     }
