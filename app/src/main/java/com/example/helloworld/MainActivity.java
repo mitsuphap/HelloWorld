@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             c3.z = 20;
             intent.putExtra("cParcelable", c3);
 
-            startActivity(intent);
+//            startActivity(intent);
         }
     }
 
@@ -187,5 +187,39 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull @org.jetbrains.annotations.NotNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        //Save only Activity thing(s) here
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        // Restore only Activity thing(s) here
+
     }
 }
