@@ -6,12 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity {
 
     int result = 0;
     TextView tvResult;
+    EditText editTextHola;
     Button btnOk;
 
     @Override
@@ -39,10 +41,16 @@ public class SecondActivity extends AppCompatActivity {
         tvResult = (TextView) findViewById(R.id.tvResult);
         tvResult.setText("Result = " + result);
 
+        editTextHola = (EditText) findViewById(R.id.editTextHola);
+
+
         btnOk = (Button) findViewById(R.id.btnOk);
         btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent returnIntent = new Intent();
+                returnIntent.putExtra("result", editTextHola.getText().toString());
+                setResult(RESULT_OK, returnIntent);
                 finish();
             }
         });

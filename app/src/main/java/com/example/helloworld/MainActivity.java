@@ -1,6 +1,7 @@
 package com.example.helloworld;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -105,6 +106,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable @org.jetbrains.annotations.Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        // Check if it is a result from SecondActivity
+        if(requestCode == 12345) {
+            if(resultCode == RESULT_OK) {
+                //Get data from data's extra
+                String result = data.getStringExtra("result");
+                Toast.makeText(MainActivity.this,
+                            result,
+                            Toast.LENGTH_SHORT)
+                        .show();
+            }
+        }
+    }
+
+    @Override
     public void onClick(View v) {
         if (v == btnCopy) {
             tvHello.setText(editTextHello.getText());
@@ -170,7 +187,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             c3.z = 20;
             intent.putExtra("cParcelable", c3);
 
-            startActivity(intent);
+            startActivityForResult(intent, 12345);
         }
     }
 
