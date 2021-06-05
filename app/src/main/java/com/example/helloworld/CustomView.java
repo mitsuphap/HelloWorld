@@ -161,7 +161,9 @@ public class CustomView extends View {
     @Nullable
     @Override
     protected Parcelable onSaveInstanceState() {
+        // small box
         Parcelable superState = super.onSaveInstanceState();
+        // big box
         BundleSavedState savedState = new BundleSavedState(superState);
         Bundle bundle = new Bundle();
         bundle.putBoolean("isBlue",isBlue);

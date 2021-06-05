@@ -36,11 +36,13 @@ public class CustomViewSavedState extends View.BaseSavedState {
     public static final Creator CREATOR = new Creator() {
         @Override
         public Object createFromParcel(Parcel source) {
+
             return new CustomViewSavedState(source);
         }
 
         @Override
         public Object[] newArray(int size) {
+
             return new CustomViewSavedState[size];
         }
     };

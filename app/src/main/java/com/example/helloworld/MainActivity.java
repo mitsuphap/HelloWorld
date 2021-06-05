@@ -25,6 +25,8 @@ import android.widget.Toast;
 import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    int x,y,z; // Save/Restore in Activity's instance state
+
     TextView tvHello;
     EditText editTextHello;
     Button btnCopy;
