@@ -9,82 +9,104 @@
         android:background="@drawable/bg"
         android:scaleType="centerCrop"></ImageView>
 
-    <LinearLayout
+    <ScrollView
+        android:fillViewport="true"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:background="@drawable/logo">
-
-        </ImageView>
-
-        <FrameLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <LinearLayout
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/logo">
+
+            </ImageView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Welcome to Clipzy"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Clip anything from over"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="100,00 jot topics"
+                        android:textColor="@color/white"></TextView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:textColor="@color/black">
+
+                    </EditText>
+                </LinearLayout>
+            </FrameLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_btn_welcome"
+                android:text="Get Started"></Button>
+
+            <TextView
+                style="@style/TextViewStyle.Green"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Welcome to Clipzy"
-                    android:textColor="@color/white"
-                    android:textSize="24sp"></TextView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Clip anything from over"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"></TextView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="100,00 jot topics"
-                    android:textColor="@color/white"></TextView>
-            </LinearLayout>
-        </FrameLayout>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:background="@drawable/selector_btn_welcome"
-            android:text="Get Started"></Button>
-
-        <TextView
-            style="@style/TextViewStyle.Green"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="skip">
-            android:layout_centerHorizontal="true"</TextView>
+                android:layout_marginTop="20dp"
+                android:text="skip">
+                android:layout_centerHorizontal="true"</TextView>
 
 
-        <TextView
-            android:id="@+id/policy"
-            style="@style/TextViewStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="center"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="4dp"
-            android:text="By continuing, you accept the Term of Use and Privacy Policy"></TextView>
-    </LinearLayout>
+            <TextView
+                android:id="@+id/policy"
+                style="@style/TextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp"
+                android:text="By continuing, you accept the Term of Use and Privacy Policy"></TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:textColor="@color/black">
+
+            </EditText>
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

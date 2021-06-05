@@ -57,9 +57,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.welcome);
 
-        initInstances();
+        //initInstances();
 
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
@@ -71,8 +71,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         viewGroup1 = (CustomViewGroup) findViewById(R.id.viewGroup1);
         viewGroup2 = (CustomViewGroup) findViewById(R.id.viewGroup2);
 
-        viewGroup1.setButtonText("Hello");
-        viewGroup2.setButtonText("World");
+//        viewGroup1.setButtonText("Hello");
+//        viewGroup2.setButtonText("World");
 
     }
 
