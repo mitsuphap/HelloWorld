@@ -57,9 +57,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
 
-        setContentView(R.layout.welcome);
+        setContentView(R.layout.activity_main);
 
-        //initInstances();
+        initInstances();
 
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
@@ -71,8 +71,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         viewGroup1 = (CustomViewGroup) findViewById(R.id.viewGroup1);
         viewGroup2 = (CustomViewGroup) findViewById(R.id.viewGroup2);
 
-//        viewGroup1.setButtonText("Hello");
-//        viewGroup2.setButtonText("World");
+        viewGroup1.setButtonText("Hello");
+        viewGroup2.setButtonText("World");
 
     }
 
@@ -195,6 +195,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             intent.putExtra("cParcelable", c3);
 
             startActivityForResult(intent, 12345);
+            overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
         }
     }
 
