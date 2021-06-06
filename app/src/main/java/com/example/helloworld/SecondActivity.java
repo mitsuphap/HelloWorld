@@ -52,7 +52,15 @@ public class SecondActivity extends AppCompatActivity {
                 returnIntent.putExtra("result", editTextHola.getText().toString());
                 setResult(RESULT_OK, returnIntent);
                 finish();
+
             }
         });
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        // also back from device fade
+        overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
     }
 }
